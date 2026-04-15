@@ -24,6 +24,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -42,12 +43,16 @@
   <canvas id="heroNet" class="hero-net"></canvas>
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
-    <div class="availability"><span class="dot"></span> Available for new projects</div>
+    <div class="availability"><span class="dot"></span> Open for new opportunities</div>
     <h1>Muhammad Syamim Yakop</h1>
     <p class="tagline">AI Implementation Engineer — deploying agentic AI, RAG, and workflow automation into real engineering operations.</p>
     <p class="typewriter">&gt; building <span id="twText"></span><span class="tw-cursor">▊</span></p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="resume.pdf" download class="btn btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
       <a href="#contact" class="btn btn-ghost">Get in Touch</a>
     </div>
     <div class="hero-socials">
@@ -475,7 +480,64 @@
   </div>
 </section>
 
-<section id="education" class="section section-alt">
+<section id="blog" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Writing</span>
+    <h2>Notes from the Build</h2>
+    <p class="section-lede">Short technical writeups on the AI systems I've shipped — architecture, trade-offs, and what actually worked in production.</p>
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-thumb thumb-grad-2">
+          <span class="blog-cat">Agentic AI</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><span>2026</span> · <span>8 min read</span></div>
+          <h3>Building Solaris: An Agentic AI for Regulatory Pre-Screening</h3>
+          <p>How we wired an LLM-driven agent into a trade license workflow — decomposing compliance checks into tool calls, handling rejection reasoning, and why we avoided fine-tuning. Cut manual processing effort by 60–80%.</p>
+          <div class="tags"><span>Agents</span><span>LLM Orchestration</span><span>Vertex AI</span></div>
+          <div class="project-links">
+            <a href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb thumb-grad-3">
+          <span class="blog-cat">RAG</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><span>2025</span> · <span>10 min read</span></div>
+          <h3>RAG Over Messy Enterprise Data: Lessons from a 70% Retrieval Speedup</h3>
+          <p>Chunking strategy, hybrid retrieval, and the unglamorous preprocessing work that made our internal RAG system actually useful. What I'd do differently, and why vector search alone isn't enough.</p>
+          <div class="tags"><span>RAG</span><span>Pinecone</span><span>Embeddings</span></div>
+          <div class="project-links">
+            <a href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb thumb-grad-4">
+          <span class="blog-cat">Automation</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><span>2025</span> · <span>6 min read</span></div>
+          <h3>The Telegram Progress Chaser: Agentic Follow-ups for Project Managers</h3>
+          <p>How an agentic layer replaced 50% of admin overhead — auto-filling forms, chasing updates on Telegram, and turning status noise into structured reports. Architecture, prompts, and guardrails.</p>
+          <div class="tags"><span>Agents</span><span>Telegram API</span><span>PM Automation</span></div>
+          <div class="project-links">
+            <a href="#">Read →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
   <div class="container">
     <span class="eyebrow">Credentials</span>
     <h2>Education & Certifications</h2>
@@ -543,11 +605,16 @@
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section section-alt">
   <div class="container contact">
     <span class="eyebrow">Contact</span>
     <h2>Let's Connect.</h2>
     <p>Open to collaborations, side projects, tech ventures, and full-time opportunities. Whether you're hiring, scoping an AI system for your operations, or just want to talk shop — reach out through whichever channel works best.</p>
+
+    <a href="resume.pdf" download class="btn btn-primary contact-resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume (PDF)
+    </a>
 
     <div class="contact-actions">
       <a href="https://wa.me/60142866301" target="_blank" rel="noopener" class="contact-btn whatsapp">
