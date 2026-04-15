@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Syamim Yakop — AI Implementation Engineer</title>
+<meta name="description" content="AI Implementation Engineer — end-to-end deployment of AI-driven operational systems across engineering and construction environments." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand" aria-label="Home">
+      <svg class="brand-home" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+      <span class="brand-text">MSY<span>.</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-floor"></div>
+  </div>
+  <canvas id="heroNet" class="hero-net"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="availability"><span class="dot"></span> Available for new projects</div>
+    <h1>Muhammad Syamim Yakop</h1>
+    <p class="tagline">AI Implementation Engineer — deploying agentic AI, RAG, and workflow automation into real engineering operations.</p>
+    <p class="typewriter">&gt; building <span id="twText"></span><span class="tw-cursor">▊</span></p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/syameemo/" target="_blank" rel="noopener" class="hero-social linkedin" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://wa.me/60142866301" target="_blank" rel="noopener" class="hero-social whatsapp" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="mailto:syamimyakop@gmail.com" class="hero-social email" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span class="scroll-label">scroll to explore</span>
+    <span class="scroll-arrow">↓</span>
+  </a>
+</header>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow">About</span>
+      <h2>Turning Engineering Workflows Into AI Systems</h2>
+      <p>I'm an <strong>AI Implementation Engineer</strong> specializing in end-to-end deployment of AI-driven operational systems across engineering and construction environments. I combine expertise in <strong>systems integration</strong> (SCADA, CMMS, T&C) with advanced capabilities in <strong>agentic AI, RAG architectures, and workflow automation</strong>.</p>
+      <p>I transform complex engineering workflows into production-ready AI systems — integrating across enterprise platforms and multidisciplinary teams with a strong execution focus. Graduate Engineer with the Board of Engineers Malaysia (BEM), Graduate Member of IEM.</p>
+      <p class="verdict">AI Systems · RAG · Agentic Workflows · SCADA / CMMS Integration</p>
+    </div>
+
+    <div class="about-visual">
+    <div class="terminal">
+      <div class="propic-wrap">
+        <img src="propic.jpeg" alt="Muhammad Syamim Yakop" class="propic" />
+        <div class="propic-ring"></div>
+      </div>
+      <div class="terminal-head">
+        <span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span>
+        <span class="terminal-title">~/syamim — zsh</span>
+      </div>
+<pre class="terminal-body"><span class="t-prompt">msy@meem</span> <span class="t-path">~</span> $ whoami
+<span class="t-out">Muhammad Syamim Yakop</span>
+<span class="t-prompt">msy@meem</span> <span class="t-path">~</span> $ cat profile.json
+<span class="t-key">{</span>
+  <span class="t-key">"role"</span>: <span class="t-str">"R&D Engineer (AI)"</span>,
+  <span class="t-key">"focus"</span>: <span class="t-str">"AI Implementation"</span>,
+  <span class="t-key">"stack"</span>: [
+    <span class="t-str">"Agentic AI"</span>, <span class="t-str">"RAG"</span>,
+    <span class="t-str">"Vertex AI"</span>, <span class="t-str">"SCADA/CMMS"</span>
+  ],
+  <span class="t-key">"credentials"</span>: [<span class="t-str">"BEM"</span>, <span class="t-str">"IEM"</span>, <span class="t-str">"PMI GenAI"</span>],
+  <span class="t-key">"status"</span>: <span class="t-str">"shipping"</span>
+<span class="t-key">}</span>
+<span class="t-prompt">msy@meem</span> <span class="t-path">~</span> $ <span class="cursor">█</span></pre>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Recent Highlights</span>
+    <h2>Shipping in the Real World</h2>
+    <p class="section-lede">Launches, milestones, and moments from the last few years — across AI, commissioning, and mechanization.</p>
+
+    <div class="highlights">
+
+      <article class="highlight">
+        <div class="highlight-media quad">
+          <img src="Agentic AI for Trade License Application 1.jpeg" alt="Agentic AI for Trade License Application — photo 1" />
+          <img src="Agentic AI for Trade License Application 3.jpeg" alt="Agentic AI for Trade License Application — photo 3" />
+          <img src="Agentic AI for Trade License Application 4.jpeg" alt="Agentic AI for Trade License Application — photo 4" />
+          <img src="Agentic AI for Trade License Application 5.jpeg" alt="Agentic AI for Trade License Application — photo 5" />
+          <span class="highlight-badge">Latest</span>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-date">2026</div>
+          <h3>Featured — Agentic AI for Trade License Application</h3>
+          <p>Showcased the Solaris system at a major public event: an agentic AI that pre-screens and validates trade license applications end-to-end, cutting manual processing effort by 60–80%.</p>
+          <div class="tags"><span>Agentic AI</span><span>Keynote</span><span>Solaris</span></div>
+        </div>
+      </article>
+
+      <article class="highlight reverse">
+        <div class="highlight-media dual">
+          <img src="FAT Delivery — SSSS Dubai & SCADA China 1.jpeg" alt="FAT Delivery — SCADA China" style="transform: scale(1.25); object-position: center 40%;" />
+          <img src="propic.jpeg" alt="FAT Delivery — SSSS Dubai" />
+          <span class="highlight-badge">2025</span>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-date">2025</div>
+          <h3>FAT Delivery — SSSS (Dubai) &amp; SCADA (China)</h3>
+          <p>Completed Factory Acceptance Testing for the SSSS system in Dubai and SCADA integration in China — validating multi-vendor system readiness across two international sites for the ART project.</p>
+          <div class="tags"><span>SCADA</span><span>FAT</span><span>International</span></div>
+        </div>
+      </article>
+
+      <article class="highlight">
+        <div class="highlight-media dual">
+          <img src="Automated Harvesting Machine — Launched with Sarawak Premier 1.jpeg" alt="Automated Harvesting Machine launch — photo 1" />
+          <img src="Automated Harvesting Machine — Launched with Sarawak Premier 2.jpeg" alt="Automated Harvesting Machine launch — photo 2" />
+          <span class="highlight-badge">2024</span>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-date">2024</div>
+          <h3>Automated Harvesting Machine — Launched with Sarawak Premier</h3>
+          <p>Official launch of the AI-assisted automated harvesting system by the Premier of Sarawak (Chief Minister). State-recognized innovation; ~100% productivity gain deployed across 4,000+ hectares.</p>
+          <div class="tags"><span>Mechatronics</span><span>Launch</span><span>State-recognized</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <span class="eyebrow">Selected Work</span>
+    <h2>Projects</h2>
+    <p class="section-lede">Production AI systems shipped into engineering and construction operations — with measurable outcomes.</p>
+
+    <div class="project-filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="ai">AI</button>
+      <button class="filter" data-filter="rag">RAG</button>
+      <button class="filter" data-filter="automation">Automation</button>
+      <button class="filter" data-filter="integration">Integration</button>
+      <button class="filter" data-filter="mechanical">Mechanical</button>
+    </div>
+
+    <h3 class="projects-heading">Active</h3>
+    <div class="projects">
+
+      <article class="project-card" data-cat="ai automation">
+        <div class="project-thumb thumb-grad-1">
+          <div class="thumb-mono">solaris.ai</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>Solaris — AI Regulatory Pre-Screening</h4>
+            <span class="year">2025</span>
+          </div>
+          <p>AI-powered regulatory pre-screening system for trade license applications. Automates validation, compliance checks, and rejection workflows. <strong>Reduced manual processing effort by 60–80%</strong>.</p>
+          <div class="tags">
+            <span>Agentic AI</span><span>Vertex AI</span><span>Python</span><span>Workflow Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="ai rag">
+        <div class="project-thumb thumb-grad-2">
+          <div class="thumb-mono">internal.rag</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>Internal RAG Knowledge System</h4>
+            <span class="year">2025</span>
+          </div>
+          <p>Semantic search and contextual retrieval across organizational data. <strong>Reduced information retrieval time by &gt;70%</strong>, replacing manual document hunting across siloed stores.</p>
+          <div class="tags">
+            <span>RAG</span><span>Pinecone</span><span>Gemini</span><span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="ai">
+        <div class="project-thumb thumb-grad-3">
+          <div class="thumb-mono">offline.chat</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>Secure Offline AI Chatbot</h4>
+            <span class="year">2025</span>
+          </div>
+          <p>Offline-first AI assistant ensuring data privacy and eliminating reliance on external cloud inference — built for sensitive regulatory and enterprise contexts.</p>
+          <div class="tags">
+            <span>Local LLM</span><span>Privacy</span><span>On-Prem</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Link →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="ai automation">
+        <div class="project-thumb thumb-grad-4">
+          <div class="thumb-mono">agentic.pm</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>Agentic AI Project Management System</h4>
+            <span class="year">2025</span>
+          </div>
+          <p>End-to-end agentic AI for project lifecycle automation: AI form pre-filling, automated progress tracking, report evaluation, Telegram-based progress chasers, and dynamic status generation. <strong>Reduced administrative workload by 50%+</strong>.</p>
+          <div class="tags">
+            <span>Agentic AI</span><span>LLM Orchestration</span><span>Telegram API</span><span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="integration automation">
+        <div class="project-thumb thumb-grad-5">
+          <div class="thumb-mono">t&amp;c.dash</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>T&amp;C Dashboard (ART Project)</h4>
+            <span class="year">2024</span>
+          </div>
+          <p>Centralized Testing & Commissioning dashboard database across SCADA, CMMS, and COMMS systems. Applied LLMs to automate validation and technical reporting — <strong>cut documentation turnaround by 30–50%</strong>.</p>
+          <div class="tags">
+            <span>SCADA</span><span>CMMS</span><span>LLM</span><span>System Integration</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Link →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cat="mechanical ai">
+        <div class="project-thumb thumb-grad-6">
+          <div class="thumb-mono">auto.harvest</div>
+          <span class="status active">● active</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>AI-Assisted Automated Harvesting</h4>
+            <span class="year">2023</span>
+          </div>
+          <p>State-recognized innovation. AI-assisted mechanization system improving operational productivity by <strong>~100%</strong>. Deployed across <strong>4,000+ hectares</strong> via feasibility studies, FAT, and SAT.</p>
+          <div class="tags">
+            <span>Mechatronics</span><span>Computer Vision</span><span>Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <h3 class="projects-heading archived-heading">Earlier Work</h3>
+    <div class="projects">
+      <article class="project-card archived" data-cat="automation integration">
+        <div class="project-thumb thumb-grad-muted">
+          <div class="thumb-mono">jkr.fleet</div>
+          <span class="status archived">◌ earlier</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>JKR Fleet Maintenance System</h4>
+            <span class="year">Earlier</span>
+          </div>
+          <p>Digital maintenance and repair tracking system for fleet operations. <strong>Reduced service processing time by ~70%</strong>, with operational dashboards for decision-making.</p>
+          <div class="tags">
+            <span>Fleet Ops</span><span>Dashboards</span><span>Digitalization</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card archived" data-cat="ai">
+        <div class="project-thumb thumb-grad-muted">
+          <div class="thumb-mono">analytics.ai</div>
+          <span class="status archived">◌ earlier</span>
+        </div>
+        <div class="project-meta">
+          <div class="project-head">
+            <h4>AI-Driven Analytics Tools</h4>
+            <span class="year">2024–25</span>
+          </div>
+          <p>Internal AI analytics tools automating reporting and supporting data-driven operational decisions across engineering teams.</p>
+          <div class="tags">
+            <span>Analytics</span><span>LLM</span><span>Reporting</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Tech Stack</span>
+    <h2>Skills &amp; Tools</h2>
+    <p class="section-lede">Production-level tools I use across AI, engineering, and integration work.</p>
+
+    <div class="stack-grid">
+
+      <div class="stack-card">
+        <div class="stack-head">
+          <span class="stack-icon">◐</span>
+          <h3>AI / Machine Learning</h3>
+        </div>
+        <div class="logo-grid">
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/openai/7cf3c4" alt=""><span>OpenAI</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/anthropic/7cf3c4" alt=""><span>Claude</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/googlegemini/7cf3c4" alt=""><span>Gemini</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/tensorflow/7cf3c4" alt=""><span>TensorFlow</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/keras/7cf3c4" alt=""><span>Keras</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/scikitlearn/7cf3c4" alt=""><span>scikit-learn</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/opencv/7cf3c4" alt=""><span>OpenCV</span></div>
+          <div class="logo-item"><span class="logo-text">RAG</span><span>RAG</span></div>
+          <div class="logo-item"><span class="logo-text">◆</span><span>LLM Agents</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/perplexity/7cf3c4" alt=""><span>Perplexity</span></div>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-head">
+          <span class="stack-icon">◈</span>
+          <h3>Web Development</h3>
+        </div>
+        <div class="logo-grid">
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/python/7cf3c4" alt=""><span>Python</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/typescript/7cf3c4" alt=""><span>TypeScript</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/javascript/7cf3c4" alt=""><span>JavaScript</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/react/7cf3c4" alt=""><span>React</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/nextdotjs/7cf3c4" alt=""><span>Next.js</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/nodedotjs/7cf3c4" alt=""><span>Node.js</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/fastapi/7cf3c4" alt=""><span>FastAPI</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/html5/7cf3c4" alt=""><span>HTML5</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/css3/7cf3c4" alt=""><span>CSS3</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/c/7cf3c4" alt=""><span>C / C++</span></div>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-head">
+          <span class="stack-icon">◧</span>
+          <h3>Platforms &amp; Data</h3>
+        </div>
+        <div class="logo-grid">
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/googlecloud/7cf3c4" alt=""><span>Vertex AI</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/firebase/7cf3c4" alt=""><span>Firebase</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/pinecone/7cf3c4" alt=""><span>Pinecone</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/weaviate/7cf3c4" alt=""><span>Weaviate</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/telegram/7cf3c4" alt=""><span>Telegram API</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/whatsapp/7cf3c4" alt=""><span>WhatsApp API</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/powerbi/7cf3c4" alt=""><span>Power BI</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/googleanalytics/7cf3c4" alt=""><span>GA</span></div>
+          <div class="logo-item"><span class="logo-text">API</span><span>REST / Webhooks</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/microsoftexcel/7cf3c4" alt=""><span>Excel / Access</span></div>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <div class="stack-head">
+          <span class="stack-icon">▣</span>
+          <h3>Engineering Systems</h3>
+        </div>
+        <div class="logo-grid">
+          <div class="logo-item"><span class="logo-text">SCADA</span><span>SCADA</span></div>
+          <div class="logo-item"><span class="logo-text">CMMS</span><span>CMMS</span></div>
+          <div class="logo-item"><span class="logo-text">◉</span><span>COMMS</span></div>
+          <div class="logo-item"><span class="logo-text">KNX</span><span>KNX BMS</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/autodesk/7cf3c4" alt=""><span>AutoCAD</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/autodeskrevit/7cf3c4" alt=""><span>Revit</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/dassaultsystemes/7cf3c4" alt=""><span>SolidWorks</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/mathworks/7cf3c4" alt=""><span>MATLAB</span></div>
+          <div class="logo-item"><span class="logo-text">P6</span><span>Primavera</span></div>
+          <div class="logo-item"><img src="https://cdn.simpleicons.org/mondaydotcom/7cf3c4" alt=""><span>Monday</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <span class="eyebrow">Journey</span>
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <div class="tl-date">Dec 2025 — Present</div>
+        <div class="tl-body">
+          <h3>R&D Engineer (AI)</h3>
+          <p>Designed and deployed production AI systems: Solaris regulatory pre-screening, internal RAG knowledge system, secure offline chatbot, and agentic AI project management (form pre-filling, progress tracking, Telegram-based follow-ups). Led Agile sprint execution as acting Scrum Master across multiple production deliverables.</p>
+          <div class="tags"><span>Agentic AI</span><span>RAG</span><span>Vertex AI</span><span>Scrum</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">ART Project</div>
+        <div class="tl-body">
+          <h3>Testing & Commissioning Engineer</h3>
+          <p>Executed end-to-end T&C lifecycle across SCADA, CMMS, and communication systems. Built centralized T&C dashboard database, applied LLMs to automate validation and technical reporting (30–50% faster turnaround). Led root cause analysis across multi-vendor environments and coordinated C&I, QAQC, Safety, and vendor teams.</p>
+          <div class="tags"><span>SCADA</span><span>CMMS</span><span>COMMS</span><span>LLM Automation</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">Earlier</div>
+        <div class="tl-body">
+          <h3>R&D Mechanization Engineer</h3>
+          <p>Led development of an AI-assisted automated harvesting system — state-recognized innovation, ~100% productivity gain. Managed deployment across 4,000+ hectares (feasibility, FAT, SAT). Delivered technical reports, cost-benefit analyses, and updates directly to Board and COO.</p>
+          <div class="tags"><span>Mechatronics</span><span>Computer Vision</span><span>FAT/SAT</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">Earlier</div>
+        <div class="tl-body">
+          <h3>Assistant Engineer — JKR Fleet Department</h3>
+          <p>Developed digital maintenance and repair tracking system (~70% faster service processing). Supported fleet operations, inspections, preventive maintenance, and compliance monitoring. Produced operational dashboards and technical reports.</p>
+          <div class="tags"><span>JKR</span><span>Fleet Ops</span><span>Dashboards</span></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="education" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Credentials</span>
+    <h2>Education & Certifications</h2>
+    <div class="cred-grid">
+
+      <div class="cred-col">
+        <h3>Education</h3>
+        <ul class="cred-list">
+          <li>
+            <strong>B.Eng. (Hons) Mechanical Engineering</strong>
+            <span>Universiti Malaysia Sarawak (UNIMAS) · Second Upper Class</span>
+            <em>Dean's List — Sem 2 2019/20 (3.54), Sem 2 2022/23 (3.86)</em>
+          </li>
+          <li>
+            <strong>Malaysia Matriculation Programme</strong>
+            <span>Sarawak Matriculation College (KMSW) · Second Upper Class</span>
+          </li>
+          <li>
+            <strong>SPM — SM Sains Kuching</strong>
+            <span>8A 1B · Anugerah Pelajar Yayasan Sarawak</span>
+          </li>
+          <li>
+            <strong>PT3 — SM Sains Kuching</strong>
+            <span>9A 1B · Anugerah Pelajar Yayasan Sarawak</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cred-col">
+        <h3>Certifications & Licenses</h3>
+        <ul class="cred-list">
+          <li><strong>Graduate Engineer</strong><span>Board of Engineers Malaysia (BEM)</span></li>
+          <li><strong>Graduate Member</strong><span>Institution of Engineers Malaysia (IEM)</span></li>
+          <li><strong>Generative AI for Project Managers</strong><span>Project Management Institute (PMI)</span></li>
+          <li><strong>Google Cloud Generative AI</strong><span>Google</span></li>
+          <li><strong>Machine Learning: Computer Vision & Generative AI</strong><span>WonderTech</span></li>
+          <li><strong>Building Management System</strong><span>KNX</span></li>
+          <li><strong>Industry Continuous Development Programme</strong><span>MINTRED Sarawak</span></li>
+        </ul>
+      </div>
+
+      <div class="cred-col">
+        <h3>Languages</h3>
+        <ul class="cred-list">
+          <li><strong>English</strong><span>Proficient · MUET Band 4</span></li>
+          <li><strong>Malay</strong><span>Native speaker</span></li>
+          <li><strong>Japanese</strong><span>SPM (C)</span></li>
+          <li><strong>Local</strong><span>Bahasa Melayu Sarawak · Bahasa Iban</span></li>
+        </ul>
+      </div>
+
+      <div class="cred-col">
+        <h3>Leadership</h3>
+        <ul class="cred-list">
+          <li><strong>EXCO, Student Association Faculty of Engineering (SAFE)</strong><span>UNIMAS · 2022–2023</span></li>
+          <li><strong>Volunteering Committee</strong><span>National Kidney Foundation Sarawak · 2023–Present</span></li>
+          <li><strong>Secretary</strong><span>Viva Sarawak Car Community · 2020–2023</span></li>
+          <li><strong>Yang Di-Pertua</strong><span>Kolej Matrikulasi Sarawak · 2018–2019</span></li>
+          <li><strong>Majlis Pemimpin Murid</strong><span>SM Sains Kuching · 2016–2017</span></li>
+          <li><strong>President, Mathematics Club</strong><span>SM Sains Kuching · 2016–2017</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container contact">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's Connect.</h2>
+    <p>Open to collaborations, side projects, tech ventures, and full-time opportunities. Whether you're hiring, scoping an AI system for your operations, or just want to talk shop — reach out through whichever channel works best.</p>
+
+    <div class="contact-actions">
+      <a href="https://wa.me/60142866301" target="_blank" rel="noopener" class="contact-btn whatsapp">
+        <span class="contact-ico">💬</span>
+        <span class="contact-label">
+          <strong>WhatsApp</strong>
+          <em>Quick chat</em>
+        </span>
+      </a>
+      <a href="https://www.linkedin.com/in/syameemo/" target="_blank" rel="noopener" class="contact-btn linkedin">
+        <span class="contact-ico">in</span>
+        <span class="contact-label">
+          <strong>LinkedIn</strong>
+          <em>Professional network</em>
+        </span>
+      </a>
+      <a href="mailto:syamimyakop@gmail.com" class="contact-btn email">
+        <span class="contact-ico">✉</span>
+        <span class="contact-label">
+          <strong>Email</strong>
+          <em>Formal enquiries</em>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Muhammad Syamim Yakop</span>
+    <span>Built with atoms and bits.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
